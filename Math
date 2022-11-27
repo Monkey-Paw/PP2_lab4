@@ -1,1 +1,36 @@
-jmgc
+import math
+
+angle = int(input())
+the_radian = math.radians(angle)
+
+print(the_radian)
+
+Task#2
+import math
+
+height = float(input('enter numbers in the order: height, 1st base length, 2nd base length\n'))
+length1 = float(input())
+length2 = float(input())
+area = ((length1 + length2)/2*height)
+print(area)
+
+task#3
+
+import math
+
+from math import tan, pi
+sides = int(input("Input number of sides: "))
+length = int(input("Input the length of a side: "))
+area = sides * (length ** 2) / (4 * tan(pi / sides))
+print("The area of the polygon is: ", area)
+
+
+taks#4
+
+import math
+
+length = float(input(Length of base:))
+Height = float(input(Height of parallelogram: ))
+area = Height * length
+
+print(area)
