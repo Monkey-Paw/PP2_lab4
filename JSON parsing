@@ -1,0 +1,20 @@
+import json
+with open('sample-data.json', 'r') as f:
+	data = json.load(f)
+
+print('Interface Status\n'
+    '================================================================================\n'
+    'DN                                                 Description           Speed    MTU\n'  
+    '-------------------------------------------------- --------------------  ------  ------')
+
+
+
+for element in data['imdata']:
+    #print(type(element))
+    DN = element['l1PhysIf']['attributes']['dn']
+    descr = element['l1PhysIf']['attributes']['descr']
+    speed = element['l1PhysIf']['attributes']['speed']
+    mtu = element['l1PhysIf']['attributes']['mtu']
+    if descr == '':
+        descr = "                          "
+    print(DN, '  ', descr, speed, mtu)
