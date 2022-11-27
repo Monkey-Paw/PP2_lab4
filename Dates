@@ -21,6 +21,7 @@ print(dt)
 print()
 
 Task#4
+import math
 from datetime import datetime
 print("enter time in this format yyyy-mm-dd")
 input_time1 = input()
@@ -34,9 +35,6 @@ try:
   timestamp2 = datetime.timestamp(date2)
   diff = int(timestamp1 - timestamp2)
 
-  if diff < 0:
-    diff *= -1
-
-  print(diff)
+  print(abs(diff))
 except:
   print('Please enter correct date format')
