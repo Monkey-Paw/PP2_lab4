@@ -47,7 +47,35 @@ print (",".join(values))
 
 Task4
 
+A = int(input())
+B = int(input())
+num = []
+for i in range(A, B):
+    num.append(i)
+def squares (num):
+    for i in num:
+        yield (i*i)
 
+nums = squares(num)
+
+for i in num:
+    if i*i == next(nums):
+        print('Check!')
+
+Task5
+
+def DecreaseGenerator(n):
+    n += 1
+    while n > 0:
+        n -= 1
+        yield n
+
+n = int(input())
+values = []
+for i in DecreaseGenerator(n):
+    values.append(str(i))
+
+print (",".join(values))
 
 
 
