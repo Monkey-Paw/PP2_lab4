@@ -1,0 +1,54 @@
+Task1
+
+N = int(input())
+num = []
+for i in range (0, N+1):
+    num.append(i)
+def squ_num (num):
+    for i in num:
+        yield (i*i)
+
+nums = squ_num(num)
+
+for i in num:
+    print(next(nums))
+
+Task2
+
+def EvenGenerator(n):
+    i=0
+    while i<=n:
+        if i%2==0:
+            yield i
+        i+=1
+
+n=int(input())
+values = []
+for i in EvenGenerator(n):
+    values.append(str(i))
+
+print (",".join(values))
+
+Task3
+
+def EvenGenerator(n):
+    i=0
+    while i<=n:
+        if i%3==0 and i%4==0:
+            yield i
+        i+=1
+
+n=int(input())
+values = []
+for i in EvenGenerator(n):
+    values.append(str(i))
+
+print (",".join(values))
+
+Task4
+
+
+
+
+
+
