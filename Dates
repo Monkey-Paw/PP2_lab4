@@ -1,0 +1,42 @@
+Task#1
+
+from datetime import date, timedelta
+dt = date.today() - timedelta(5)
+print(date.today())
+print(dt)
+
+Task#2
+import datetime
+today = datetime.date.today()
+yesterday = today - datetime.timedelta(days = 1)
+tomorrow = today + datetime.timedelta(days = 1)
+print('Yesterday : ',yesterday)
+print('Today : ',today)
+print('Tomorrow : ',tomorrow)
+
+Task#3
+import datetime
+dt = datetime.datetime.today().replace(microsecond=0)
+print(dt)
+print()
+
+Task#4
+from datetime import datetime
+print("enter time in this format yyyy-mm-dd")
+input_time1 = input()
+input_time2 = input()
+
+try:
+  date1 = datetime.strptime(input_time1, '%Y-%m-%d')
+  date2 = datetime.strptime(input_time2, "%Y-%m-%d")
+
+  timestamp1 = datetime.timestamp(date1)
+  timestamp2 = datetime.timestamp(date2)
+  diff = int(timestamp1 - timestamp2)
+
+  if diff < 0:
+    diff *= -1
+
+  print(diff)
+except:
+  print('Please enter correct date format')
